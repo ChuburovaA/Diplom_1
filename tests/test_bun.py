@@ -1,6 +1,7 @@
 import pytest
 from praktikum.bun import Bun
 
+# Тесты на булочку для бургера
 class TestBun:
 
     # Тест на получение названия модели булки

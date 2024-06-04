@@ -7,6 +7,7 @@ from praktikum.burger import Burger
 
 from conftest import *
 
+# Тесты на создание бургера
 class TestBurger:
     # Тест на выбор булки
     def test_set_buns_successful(self, mock_bun):
