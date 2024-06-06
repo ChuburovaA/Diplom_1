@@ -34,10 +34,14 @@ class TestBurger:
     # Тест на перемещение ингредиентов
     def test_move_ingredients_successful(self, mock_bun, mock_ingredient):
         burger = Burger()
-        burger.add_ingredient(mock_ingredient)
-        burger.add_ingredient(mock_ingredient)
 
-        assert len(burger.ingredients) == 2
+        burger_1 = burger.add_ingredient(mock_ingredient)
+        burger_2 = burger.add_ingredient(mock_ingredient)
+
+        burger.ingredients = [burger_1, burger_2]
+        burger.move_ingredient(0,1)
+
+        assert burger.ingredients == [burger_1, burger_2]
 
     # Тест на получение цены бургера
     def test_get_price(self, mock_bun, mock_ingredient):
